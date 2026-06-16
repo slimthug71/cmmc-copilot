@@ -1,0 +1,60 @@
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    container_name: cmmc-pilot-db
+    environment:
+      POSTGRES_DB: cmmc_pilot
+      POSTGRES_USER: cmmc
+      POSTGRES_PASSWORD: cmmc
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./infra/postgres/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U cmmc -d cmmc_pilot"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    container_name: cmmc-pilot-backend
+    environment:
+      DATABASE_URL: postgresql+psycopg://cmmc:cmmc@db:5432/cmmc_pilot
+      CORS_ORIGINS: http://localhost:3000,http://127.0.0.1:3000
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      OPENAI_MODEL: ${OPENAI_MODEL:-gpt-4.1-mini}
+      PRODUCT_DATA_RULE: "Azure Commercial is not approved for CUI, ITAR, export-controlled data, classified data, or sensitive government contract information."
+      PORT: 8000
+    ports:
+      - "8000:8000"
+    volumes:
+      - backend_storage:/app/storage
+    depends_on:
+      db:
+        condition: service_healthy
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+      args:
+        NEXT_BACKEND_URL: http://backend:8000
+        NEXT_PUBLIC_API_BASE_URL: ""
+    container_name: cmmc-pilot-frontend
+    environment:
+      NEXT_BACKEND_URL: http://backend:8000
+      NEXT_PUBLIC_API_BASE_URL: ""
+      PRODUCT_DATA_RULE: "Azure Commercial is not approved for CUI, ITAR, export-controlled data, classified data, or sensitive government contract information."
+      PORT: 3000
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:
+  backend_storage:

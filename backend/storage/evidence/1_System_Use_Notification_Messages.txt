@@ -1,0 +1,1 @@
+System use notification message banner. Users are presented privacy and security notices before accessing the system. The notification states authorized use only and consent to monitoring.

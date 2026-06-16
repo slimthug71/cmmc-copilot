@@ -1,0 +1,7 @@
+Quarterly Access Review - Microsoft Entra ID
+Authorized users are identified in the active employee and contractor roster.
+Managers reviewed user access to SharePoint CUI sites and approved continued access.
+Privileged accounts were reviewed by the IT/Security Owner.
+Service accounts and processes acting on behalf of authorized users are listed in the identity inventory.
+Managed Windows devices authorized to connect are tracked in Intune compliance reports.
+Access is limited to authorized users, approved processes, and managed devices through Entra ID conditional access and MFA.

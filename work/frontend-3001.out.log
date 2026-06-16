@@ -1,0 +1,227 @@
+   ▲ Next.js 15.1.3
+   - Local:        http://localhost:3001
+   - Network:      http://10.0.0.17:3001
+
+ ✓ Starting...
+ ✓ Ready in 6.4s
+ ○ Compiling /copilot ...
+ ✓ Compiled /copilot in 17.4s (607 modules)
+ GET /copilot 200 in 18742ms
+ ✓ Compiled in 1831ms (304 modules)
+ GET /copilot 200 in 112ms
+ ○ Compiling / ...
+ ✓ Compiled / in 1570ms (618 modules)
+ GET / 200 in 2070ms
+ GET /copilot 200 in 74ms
+ ○ Compiling /compliance ...
+ ✓ Compiled /compliance in 1440ms (635 modules)
+ GET /compliance 200 in 1915ms
+ ○ Compiling /evidence ...
+ ✓ Compiled /evidence in 744ms (644 modules)
+ GET /evidence 200 in 1188ms
+ GET / 200 in 182ms
+ GET /copilot 200 in 215ms
+ ✓ Compiled in 3.4s (658 modules)
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 1261ms (648 modules)
+ GET /copilot 404 in 1761ms
+ GET /copilot 200 in 375ms
+ ✓ Compiled in 628ms (328 modules)
+ ✓ Compiled in 2.3s (662 modules)
+ GET /copilot 200 in 342ms
+ GET /copilot 200 in 34ms
+ GET /copilot 200 in 31ms
+ ✓ Compiled in 4.5s (660 modules)
+ GET /copilot 200 in 517ms
+ ○ Compiling /controls/[controlId]/graph ...
+ ✓ Compiled /controls/[controlId]/graph in 3.1s (657 modules)
+ GET /controls/AC.L2-3.1.1/graph 200 in 6123ms
+ GET /copilot 200 in 224ms
+ GET / 200 in 164ms
+ GET /copilot 200 in 60ms
+ GET / 200 in 43ms
+ GET /controls/AC.L2-3.1.1/graph 200 in 132ms
+ GET / 200 in 70ms
+ GET /controls/AC.L2-3.1.11/graph 200 in 70ms
+ GET / 200 in 38ms
+ ✓ Compiled in 2.9s (673 modules)
+ GET / 200 in 1081ms
+ GET /controls/AC.L2-3.1.1/graph 200 in 408ms
+ ✓ Compiled in 2.2s (673 modules)
+ GET / 200 in 311ms
+ GET / 200 in 339ms
+ GET /controls/AC.L2-3.1.1/graph 200 in 173ms
+ GET / 200 in 44ms
+ GET /copilot 200 in 69ms
+ GET /copilot 200 in 43ms
+ GET /copilot 200 in 34ms
+ GET /compliance 200 in 52ms
+ GET / 200 in 35ms
+ GET / 200 in 84ms
+ ○ Compiling /ssp ...
+ ✓ Compiled /ssp in 1633ms (682 modules)
+ GET / 200 in 482ms
+ GET /ssp 200 in 2529ms
+ ✓ Compiled in 943ms (334 modules)
+ GET / 200 in 42ms
+ GET /evidence 200 in 53ms
+ GET / 200 in 36ms
+ GET /compliance 200 in 54ms
+ GET / 200 in 32ms
+ GET /copilot 200 in 46ms
+ GET / 200 in 37ms
+ ✓ Compiled in 3.7s (676 modules)
+ GET / 200 in 649ms
+ ✓ Compiled in 2.6s (676 modules)
+ GET / 200 in 275ms
+ GET /evidence 200 in 333ms
+ GET /evidence 200 in 52ms
+ GET / 200 in 95ms
+ GET /ssp 200 in 193ms
+ GET /evidence 200 in 55ms
+ GET / 200 in 40ms
+ GET / 200 in 454ms
+ GET /copilot 200 in 134ms
+ GET /copilot 200 in 44ms
+ GET / 200 in 155ms
+ ✓ Compiled in 6.5s (676 modules)
+ GET / 200 in 552ms
+ ✓ Compiled in 876ms (334 modules)
+ GET / 200 in 48ms
+ GET / 200 in 71ms
+ ✓ Compiled in 3.6s (676 modules)
+ GET / 200 in 268ms
+ ✓ Compiled in 3.1s (676 modules)
+ GET / 200 in 207ms
+ ○ Compiling /controls/[controlId]/objectives ...
+ ✓ Compiled /controls/[controlId]/objectives in 2.9s (673 modules)
+ GET /controls/AC.L2-3.1.9/graph 200 in 2813ms
+ GET /controls/AC.L2-3.1.9/objectives 200 in 6111ms
+ GET / 200 in 176ms
+ GET /controls/AC.L2-3.1.1/graph 200 in 402ms
+ GET /controls/AC.L2-3.1.1/objectives 200 in 54ms
+ GET /controls/AC.L2-3.1.1/graph 200 in 53ms
+ GET / 200 in 49ms
+ GET /copilot 200 in 64ms
+ GET / 200 in 33ms
+ GET /ssp 200 in 70ms
+ GET / 200 in 157ms
+ GET /controls/AC.L2-3.1.11/graph 200 in 47ms
+ GET / 200 in 41ms
+ GET /controls/AC.L2-3.1.1/objectives 200 in 71ms
+ GET /evidence 200 in 57ms
+ GET / 200 in 38ms
+ GET /controls/AC.L2-3.1.1/objectives 200 in 47ms
+ GET /evidence 200 in 43ms
+ GET / 200 in 28ms
+ ✓ Compiled in 3.4s (680 modules)
+ GET / 200 in 614ms
+ ✓ Compiled in 3.7s (680 modules)
+ GET / 200 in 484ms
+ GET /evidence 200 in 411ms
+ GET / 200 in 195ms
+ GET /controls/AC.L2-3.1.1/objectives 200 in 97ms
+ GET /evidence 200 in 54ms
+ ✓ Compiled in 2.8s (680 modules)
+ GET /evidence 200 in 446ms
+ ✓ Compiled in 2s (680 modules)
+ GET /evidence 200 in 286ms
+ GET /evidence 200 in 498ms
+ GET /evidence 200 in 262ms
+ GET / 200 in 167ms
+ GET /evidence 200 in 47ms
+ ✓ Compiled in 3.6s (680 modules)
+ GET /evidence 200 in 754ms
+ ✓ Compiled in 2.4s (680 modules)
+ GET /evidence 200 in 409ms
+ ✓ Compiled in 3s (680 modules)
+ GET /evidence 200 in 329ms
+ ✓ Compiled in 1859ms (680 modules)
+ GET /evidence 200 in 418ms
+ GET /evidence 200 in 271ms
+ GET /evidence 200 in 63ms
+ GET / 200 in 93ms
+ ○ Compiling /compliance ...
+ ✓ Compiled /compliance in 1631ms (349 modules)
+ GET /compliance 200 in 2079ms
+ GET /evidence 200 in 108ms
+ ✓ Compiled in 3s (681 modules)
+ GET /evidence 200 in 502ms
+ ✓ Compiled in 2.9s (681 modules)
+ GET /evidence 200 in 277ms
+ ✓ Compiled in 2.6s (681 modules)
+ GET /evidence 200 in 274ms
+ ✓ Compiled in 2.3s (681 modules)
+ GET /evidence 200 in 413ms
+ GET /evidence 200 in 227ms
+ GET /evidence 200 in 44ms
+ GET / 200 in 172ms
+ GET /compliance 200 in 200ms
+ GET /evidence 200 in 52ms
+ GET / 200 in 85ms
+ ✓ Compiled in 2.8s (681 modules)
+ GET / 200 in 281ms
+ ✓ Compiled in 3.6s (681 modules)
+ GET / 200 in 3209ms
+ GET / 200 in 30ms
+ ✓ Compiled in 3.9s (683 modules)
+ GET / 200 in 292ms
+ ✓ Compiled in 3.4s (683 modules)
+ GET / 200 in 333ms
+ ✓ Compiled in 2.3s (683 modules)
+ GET / 200 in 366ms
+ GET /evidence?control=AC.L2-3.1.1 200 in 322ms
+ ○ Compiling /health ...
+ ✓ Compiled /health in 2.8s (694 modules)
+ GET /health 200 in 3270ms
+ GET / 200 in 39ms
+ ✓ Compiled in 2.7s (694 modules)
+ GET / 200 in 328ms
+ GET / 200 in 180ms
+ GET /health 200 in 87ms
+ GET / 200 in 40ms
+ GET /controls/AC.L2-3.1.1/objectives 200 in 131ms
+ ○ Compiling /controls/[controlId]/graph ...
+ ✓ Compiled /controls/[controlId]/graph in 1574ms (350 modules)
+ GET /controls/AC.L2-3.1.1/graph 200 in 2148ms
+ GET / 200 in 107ms
+ ○ Compiling /health ...
+ ✓ Compiled /health in 573ms (357 modules)
+ GET /health 200 in 972ms
+ GET / 200 in 104ms
+ GET /copilot 200 in 136ms
+ GET / 200 in 56ms
+ GET /compliance 200 in 182ms
+ GET / 200 in 38ms
+ GET /evidence 200 in 122ms
+ GET / 200 in 40ms
+ GET /health 200 in 49ms
+ GET / 200 in 39ms
+ GET /health 200 in 50ms
+ GET /controls/AC.L2-3.1.1/objectives 200 in 67ms
+ GET /evidence 200 in 41ms
+ GET / 200 in 34ms
+ GET /health 200 in 36ms
+ GET /evidence?control=AC.L2-3.1.1 200 in 45ms
+ GET / 200 in 32ms
+ GET /health 200 in 33ms
+ GET / 200 in 30ms
+ ✓ Compiled in 3.5s (687 modules)
+ GET / 200 in 476ms
+ ✓ Compiled in 5.1s (687 modules)
+ GET / 200 in 4291ms
+ GET / 200 in 27ms
+ ✓ Compiled in 6.2s (687 modules)
+ GET / 200 in 532ms
+ ✓ Compiled in 4.3s (687 modules)
+ GET / 200 in 476ms
+ ○ Compiling /poam ...
+ ✓ Compiled /poam in 3.5s (684 modules)
+ GET /poam 200 in 4034ms
+ GET /poam 200 in 43ms
+ ✓ Compiled in 3.7s (698 modules)
+ GET / 200 in 449ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 2.5s (688 modules)
+ GET /poam 404 in 3070ms
+[?25h
