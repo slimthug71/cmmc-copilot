@@ -9,6 +9,7 @@ on:
 env:
   BACKEND_IMAGE: cmmc-pilot-backend
   FRONTEND_IMAGE: cmmc-pilot-frontend
+  AZURE_ACR_NAME: cmmccopilotacr 
   PRODUCT_DATA_RULE: Azure Commercial is not approved for CUI, ITAR, export-controlled data, classified data, or sensitive government contract information.
 
 jobs:
@@ -28,11 +29,11 @@ jobs:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       - name: Log in to Azure Container Registry
-        run: az acr login --name "${{ secrets.AZURE_ACR_NAME }}"
+        run: az acr login --name "${{ env.AZURE_ACR_NAME }}"
 
       - name: Build and push backend image
         run: |
-          ACR_LOGIN_SERVER="${{ secrets.AZURE_ACR_NAME }}.azurecr.io"
+          ACR_LOGIN_SERVER="${{ env.AZURE_ACR_NAME }}.azurecr.io"
           docker build \
             -f Dockerfile.backend \
             -t "$ACR_LOGIN_SERVER/$BACKEND_IMAGE:${{ github.sha }}" \
@@ -42,7 +43,7 @@ jobs:
 
       - name: Build and push frontend image
         run: |
-          ACR_LOGIN_SERVER="${{ secrets.AZURE_ACR_NAME }}.azurecr.io"
+          ACR_LOGIN_SERVER="${{ env.AZURE_ACR_NAME }}.azurecr.io"
           docker build \
             -f Dockerfile.frontend \
             --build-arg NEXT_BACKEND_URL="${{ secrets.NEXT_BACKEND_URL }}" \
@@ -70,7 +71,7 @@ jobs:
         uses: azure/webapps-deploy@v3
         with:
           app-name: ${{ secrets.AZURE_BACKEND_WEBAPP_NAME }}
-          images: ${{ secrets.AZURE_ACR_NAME }}.azurecr.io/${{ env.BACKEND_IMAGE }}:${{ github.sha }}
+          images: ${{ env.AZURE_ACR_NAME }}.azurecr.io/${{ env.BACKEND_IMAGE }}:${{ github.sha }}
 
       - name: Configure frontend app settings
         run: |
@@ -88,4 +89,4 @@ jobs:
         uses: azure/webapps-deploy@v3
         with:
           app-name: ${{ secrets.AZURE_FRONTEND_WEBAPP_NAME }}
-          images: ${{ secrets.AZURE_ACR_NAME }}.azurecr.io/${{ env.FRONTEND_IMAGE }}:${{ github.sha }}
+          images: ${{ env.AZURE_ACR_NAME }}.azurecr.io/${{ env.FRONTEND_IMAGE }}:${{ github.sha }}
