@@ -9,7 +9,9 @@ on:
 env:
   BACKEND_IMAGE: cmmc-pilot-backend
   FRONTEND_IMAGE: cmmc-pilot-frontend
-  ACR_NAME: cmmccopilotacr 
+  ACR_NAME: cmmccopilotacr
+  AZURE_RESOURCE_GROUP: cmmc-resource
+  AZURE_BACKEND_WEBAPP_NAME: cmmc-env
   PRODUCT_DATA_RULE: Azure Commercial is not approved for CUI, ITAR, export-controlled data, classified data, or sensitive government contract information.
 
 jobs:
@@ -56,8 +58,8 @@ jobs:
       - name: Configure backend app settings
         run: |
           az webapp config appsettings set \
-            --resource-group "${{ secrets.AZURE_RESOURCE_GROUP }}" \
-            --name "${{ secrets.AZURE_BACKEND_WEBAPP_NAME }}" \
+            --resource-group "${{ env.AZURE_RESOURCE_GROUP }}" \
+            --name "${{ env.AZURE_BACKEND_WEBAPP_NAME }}" \
             --settings \
               WEBSITES_PORT=8000 \
               PORT=8000 \
@@ -70,14 +72,14 @@ jobs:
       - name: Deploy backend container
         uses: azure/webapps-deploy@v3
         with:
-          app-name: ${{ secrets.AZURE_BACKEND_WEBAPP_NAME }}
+          app-name: ${{ env.AZURE_BACKEND_WEBAPP_NAME }}
           images: ${{ env.ACR_NAME }}.azurecr.io/${{ env.BACKEND_IMAGE }}:${{ github.sha }}
 
       - name: Configure frontend app settings
         run: |
           az webapp config appsettings set \
-            --resource-group "${{ secrets.AZURE_RESOURCE_GROUP }}" \
-            --name "${{ secrets.AZURE_FRONTEND_WEBAPP_NAME }}" \
+            --resource-group "${{ env.AZURE_RESOURCE_GROUP }}" \
+            --name "${{ env.AZURE_FRONTEND_WEBAPP_NAME }}" \
             --settings \
               WEBSITES_PORT=3000 \
               PORT=3000 \
@@ -88,5 +90,5 @@ jobs:
       - name: Deploy frontend container
         uses: azure/webapps-deploy@v3
         with:
-          app-name: ${{ secrets.AZURE_FRONTEND_WEBAPP_NAME }}
+          app-name: ${{ env.AZURE_FRONTEND_WEBAPP_NAME }}
           images: ${{ env.ACR_NAME }}.azurecr.io/${{ env.FRONTEND_IMAGE }}:${{ github.sha }}
