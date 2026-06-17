@@ -9,7 +9,6 @@ on:
 env:
   BACKEND_IMAGE: cmmc-pilot-backend
   FRONTEND_IMAGE: cmmc-pilot-frontend
-  AZURE_ACR_NAME: cmmccopilotacr
   PRODUCT_DATA_RULE: Azure Commercial is not approved for CUI, ITAR, export-controlled data, classified data, or sensitive government contract information.
 
 jobs:
