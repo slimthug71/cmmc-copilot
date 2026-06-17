@@ -27,9 +27,7 @@ jobs:
       - name: Azure Login
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.CMMCENV_AZURE_CLIENT_ID }}
-          tenant-id: ${{ secrets.CMMCENV_AZURE_TENANT_ID }}
-          subscription-id: ${{ secrets.CMMCENV_AZURE_SUBSCRIPTION_ID }}
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       - name: Build and push container image to registry
         uses: azure/container-apps-deploy-action@v2
